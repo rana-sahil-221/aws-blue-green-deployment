@@ -1,0 +1,13 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /var/www/html/
+
+hooks:
+  BeforeInstall:
+    - location: beforeinstall.sh
+      timeout: 100
+  ApplicationStart:
+    - location: application.sh
+      timeout: 100
